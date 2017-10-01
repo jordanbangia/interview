@@ -76,12 +76,12 @@
     - naive method:  set parity to false (even), keep clearing the rightmost bit until the result is 0.  Everytime you clear, flip the parity
     - time complexity is O(s) where s is the number of set bits
     ```python
-        def countOnes(int n):
-            count = 0
-            while n != 0:
-                n = n & (n-1)
-                count += 1
-            return count
+    def countOnes(int n):
+        count = 0
+        while n != 0:
+            n = n & (n-1)
+            count += 1
+        return count
     ```
     - can do a better by using a look up table.  Can store parities for values 0 to 15 (16 bit).  To find parity for a bigger number then, can just OR with 16 1s and look up in table
 - calculate the Hamming Distance
@@ -90,3 +90,4 @@
     def hammingDistance(x, y):
         z = x ^ y   # 1 in every space where they are different
         return countOnes(z) # then its just counting 1s again
+    ```
