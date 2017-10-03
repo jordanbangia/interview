@@ -1,0 +1,14 @@
+# Stacks and Queues
+- stacks are last in first out (LIFO)
+- queues are first in first out (FIFO)
+- both can be easily implemented with a linked list
+    - stack needs 1 pointer to the top
+    - queue needs a pointer to the top and one at the bottom
+- same ideas can be done with arrays, and just keeping track of an index (index of the top/bottom)
+- priority queues
+    - order is determined not by insertion time, but by some other field
+    - supports insertion, find min/max, delete min/max operations
+    - idea is that if you always just want the highest priority elment, priority queue will take care of that at insertion time, instead of having to manually resort at extraction time
+    - backing data structure include heaps
+    - generally implemented by keeping an extra pointer to the highest priority element,so on insertion, update iff new elment is higher priority, and on deletion, delete then use find-min (or find-max) to restore the pointer
+- popping everything from a stack and pushing it all to another stack reverses the ordering

@@ -1,0 +1,26 @@
+# Arrays, Strings, and Dictionaries
+- hash tables are important
+- insertion and lookup follow a similar procedure, hash the key and go to a table location
+    - this enables O(1) lookup
+- in the case of collision, commonly handled with chaining
+    - the position is the head of linked list, items are just added to the end
+- other method is open addressing
+    - makes deletion tricky
+    - instead of creating a linked list, all elements are stored in the table
+    - when inserting, try at the hashed key value, if its empty insert there, otherwise look for the next available slot that can be placed into
+    - when accessing, some procedure is followed
+    - the searching for the next available slot is called probing
+        - linear - increase space by 1
+        - quadratic - increase space by successive outputs of quadratic polynomail
+        - double hashing - probing function is another hash function
+    - other issue becomes once bucket space is full, searching + insertion becomes much harder
+- Java has built in hashcodes
+- Python's dictionaries are implemented using hash tables
+    - they are arrays whose indexes are obtained using a hash function on the keys
+- arrays offer easy random access but hard modification
+    - hard to move elements around
+- in Java, use StringBuilder for expensive string concatenation and easy string reversal
+- in Java, everything is initailized to 0, including arrays
+- remember, chars are also ints
+- Python uses lists.  Can use arrays, but they are wrappers over C arrays
+    - should always uses lists unless you have a good reason to need C style array (possibly speed)
